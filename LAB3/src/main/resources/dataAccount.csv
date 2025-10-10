@@ -1,6 +1,16 @@
-username,password,email,expected
-john123,pass123,john@example.com,true
-,pass123,john@example.com,false
-alice,short,alice@mail.com,false
-bob123,password,bobmail.com,false
-carol,password,carol@domain.com,true
+username,password,email,expected,note
+john123,pass123,john@example.com,true,valid input
+"",pass123,john@example.com,false,username blank
+alice,short,alice@mail.com,false,password < 6 ký tự
+bob123,password,bobmail.com,false,email không hợp lệ
+"null",pass123,"null",false,username & email null
+"   ",pass123,test@mail.com,false,username blank
+john123,"null",john@example.com,false,password null
+john123,"     ",john@example.com,false,password blank
+john123,12345,john@example.com,false,password < 6 ký tự
+newUser,password,"",false,email blank
+newUser,password,invalidEmail,false,email không hợp lệ
+john123,pass123,john@example.com,false,username đã tồn tại (duplicate)
+alice123,"pass word",alice@mail.com,true,password có space hợp lệ
+"bob@home",password1,bob@home.com,true,username có ký tự @ hợp lệ
+user2,password2,user2@mail..com,false,email có dấu chấm liên tiếp sai định dạng

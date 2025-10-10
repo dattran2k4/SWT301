@@ -17,6 +17,7 @@ public class AccountServiceTest {
     @BeforeAll
     static void initAll() {
         accountService = new AccountService();
+        AccountService.clearUserList();
     }
 
     @AfterAll
@@ -28,8 +29,10 @@ public class AccountServiceTest {
     @ParameterizedTest(name = "Test {index}: username={0}, password={1}, email={2}, expected={3}")
     @CsvFileSource(resources = "/dataAccount.csv", numLinesToSkip = 1)
     void testRegisterAccount(String username, String password, String email, boolean expected) throws IOException {
+        if ("null".equals(username)) username = null;
+        if ("null".equals(password)) password = null;
+        if ("null".equals(email)) email = null;
         boolean result = accountService.registerAccount(username, password, email);
-
         // Assert
         assertEquals(expected, result);
 

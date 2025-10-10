@@ -1,8 +1,15 @@
 username=john123, password=pass123, email=john@example.com => expected=true, actual=true
-username=null, password=pass123, email=john@example.com => expected=false, actual=false
+username=, password=pass123, email=john@example.com => expected=false, actual=false
 username=alice, password=short, email=alice@mail.com => expected=false, actual=false
-username=carol, password=password, email=carol@domain.com => expected=true, actual=true
-username=john123, password=pass123, email=john@example.com => expected=true, actual=true
-username=null, password=pass123, email=john@example.com => expected=false, actual=false
-username=alice, password=short, email=alice@mail.com => expected=false, actual=false
-username=carol, password=password, email=carol@domain.com => expected=true, actual=true
+username=bob123, password=password, email=bobmail.com => expected=false, actual=false
+username=null, password=pass123, email=null => expected=false, actual=false
+username=   , password=pass123, email=test@mail.com => expected=false, actual=false
+username=john123, password=null, email=john@example.com => expected=false, actual=false
+username=john123, password=     , email=john@example.com => expected=false, actual=false
+username=john123, password=12345, email=john@example.com => expected=false, actual=false
+username=newUser, password=password, email= => expected=false, actual=false
+username=newUser, password=password, email=invalidEmail => expected=false, actual=false
+username=john123, password=pass123, email=john@example.com => expected=false, actual=false
+username=alice123, password=pass word, email=alice@mail.com => expected=true, actual=true
+username=bob@home, password=password1, email=bob@home.com => expected=true, actual=true
+username=user2, password=password2, email=user2@mail..com => expected=false, actual=false

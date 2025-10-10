@@ -1,0 +1,8 @@
+username=john123, password=pass123, email=john@example.com => expected=true, actual=true
+username=null, password=pass123, email=john@example.com => expected=false, actual=false
+username=alice, password=short, email=alice@mail.com => expected=false, actual=false
+username=carol, password=password, email=carol@domain.com => expected=true, actual=true
+username=john123, password=pass123, email=john@example.com => expected=true, actual=true
+username=null, password=pass123, email=john@example.com => expected=false, actual=false
+username=alice, password=short, email=alice@mail.com => expected=false, actual=false
+username=carol, password=password, email=carol@domain.com => expected=true, actual=true

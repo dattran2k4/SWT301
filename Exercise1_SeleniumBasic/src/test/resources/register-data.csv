@@ -1,0 +1,6 @@
+firstName,lastName,email,gender,mobile,dob,subject,hobby,address,state,city
+John,Doe,john.doe@example.com,Male,1234567890,06 Nov 1990,Maths,Reading,123 Demo St,NCR,Delhi
+Jane,Smith,jane.smith@example.com,Female,0987654321,12 Dec 1992,Physics,Music,456 Demo Ave,Uttar Pradesh,Lucknow
+Alice,Johnson,alice.j@example.com,Female,1112223333,01 Jan 1995,Chemistry,Sports,789 Test Rd,NCR,Gurgaon
+Bob,Brown,bob.b@example.com,Male,4445556666,15 Aug 1990,Biology,Reading,321 Sample St,Haryana,Panipat
+,EmptyEmail,,Male,7778889999,10 Oct 2000,Maths,Music,,NCR,Noida
